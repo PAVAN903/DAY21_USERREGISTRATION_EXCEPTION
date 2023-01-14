@@ -10,7 +10,7 @@ public class Firstname {
     static String mNumber;
 	static String password;
 	static String uPASSWORD;
-	
+	static String nPASSWORD;
 	static String fName() {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter first name");
@@ -47,12 +47,18 @@ public class Firstname {
 	     uPASSWORD=sc.next();
 		return uPASSWORD;
 	}
-	static void Print(String uPASSWORD) {
-		boolean pattern=Pattern.matches("[A-Z]{1}[a-z]{8,}", uPASSWORD);
+	static String nPASSWORD() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter password");
+	     nPASSWORD=sc.next();
+		return nPASSWORD;
+	}
+	static void Print(String nPASSWORD) {
+		boolean pattern=Pattern.matches("[A-Z]{1}[a-z]{8,}[0-9]{1,}", nPASSWORD);
 		if(pattern==true) {
-			System.out.println(" "+uPASSWORD+ " is valid password number");
+			System.out.println(" "+nPASSWORD+ " is valid password number");
 		}else {
-			System.out.println(" "+uPASSWORD+ " is not valid password number");
+			System.out.println(" "+nPASSWORD+ " is not valid password number");
 	}
 	}
      public static void main(String[] args) {
@@ -62,12 +68,14 @@ public class Firstname {
     	 String mNumber=mNumber();
     	 String password=password();
     	 String password1=uPASSWORD();
-    	 System.out.println("password  is:->");
+    	 String npassword=nPASSWORD();
+    	 System.out.println("password with numeric  is:->");
     	 Print(fName);
 		 Print(lName);
     	 Print(mail);
     	 Print(password1);
     	 Print(password1);
+    	 Print(npassword);
     	
 
 	}
