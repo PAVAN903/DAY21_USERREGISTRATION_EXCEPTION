@@ -11,6 +11,9 @@ public class Firstname {
 	static String password;
 	static String uPASSWORD;
 	static String nPASSWORD;
+	static String sPASSWORD;
+	
+	
 	static String fName() {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("enter first name");
@@ -53,29 +56,37 @@ public class Firstname {
 	     nPASSWORD=sc.next();
 		return nPASSWORD;
 	}
-	static void Print(String nPASSWORD) {
-		boolean pattern=Pattern.matches("[A-Z]{1}[a-z]{8,}[0-9]{1,}", nPASSWORD);
+	static String sPASSWORD() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("enter password");
+	     sPASSWORD=sc.next();
+		return sPASSWORD;
+	}
+	static void Print(String sPASSWORD) {
+		boolean pattern=Pattern.matches("[A-Z]{1}[a-z]{8,}[@]{1}[#]{1}[0-9]{1,}", sPASSWORD);
 		if(pattern==true) {
-			System.out.println(" "+nPASSWORD+ " is valid password number");
+			System.out.println(" "+sPASSWORD+ " is valid password number");
 		}else {
-			System.out.println(" "+nPASSWORD+ " is not valid password number");
+			System.out.println(" "+sPASSWORD+ " is not valid password number");
 	}
 	}
      public static void main(String[] args) {
-    	 String fName=fName();
-    	 String lName=lName();
-    	 String mail=mail();
-    	 String mNumber=mNumber();
-    	 String password=password();
-    	 String password1=uPASSWORD();
-    	 String npassword=nPASSWORD();
-    	 System.out.println("password with numeric  is:->");
-    	 Print(fName);
-		 Print(lName);
-    	 Print(mail);
-    	 Print(password1);
-    	 Print(password1);
-    	 Print(npassword);
+    	// String fName=fName();
+    	 //String lName=lName();
+    	 //String mail=mail();
+    	 //String mNumber=mNumber();
+    	 //String password=password();
+    	 //String password1=uPASSWORD();
+    	 //String npassword=nPASSWORD();
+    	 String spassword=sPASSWORD();
+    	 System.out.println("password with numeric and special character  is:->");
+    	 //Print(fName);
+		 //Print(lName);
+    	 //Print(mail);
+    	 //Print(password1);
+    	 //Print(password1);
+    	 //Print(npassword);
+    	 Print(spassword);
     	
 
 	}
