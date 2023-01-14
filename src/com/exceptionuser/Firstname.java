@@ -7,7 +7,8 @@ public class Firstname {
 	//static String fName;
 	//static String lName;
 	//static String mail;
-	static String mNumber;
+	//static String mNumber;
+	static String password;
 	
 	//static String fName() {
 		//Scanner sc=new Scanner(System.in);
@@ -27,30 +28,38 @@ public class Firstname {
 		//mail=sc.next();
 		//return  mail;
 	//}
-	static String mNumber() {
+	//static String mNumber() {
+		//Scanner sc=new Scanner(System.in);
+		//System.out.println("enter mobile number");
+	     //mNumber=sc.nextLine();
+		//return  mNumber;
+	//}
+	static String password() {
 		Scanner sc=new Scanner(System.in);
-		System.out.println("enter mobile number");
-	     mNumber=sc.nextLine();
-		return  mNumber;
+		System.out.println("enter password");
+	     password=sc.next();
+		return password;
 	}
-	static void Print(String mNumber) {
-		boolean pattern=Pattern.matches("[+]?{1}[0-9]{2}[\\s]?{1}[7-9]{1}[0-9]{9}", mNumber);
+	static void Print(String password) {
+		boolean pattern=Pattern.matches("[a-z]{8,}", password);
 		if(pattern==true) {
-			System.out.println(" "+mNumber+ " is valid mobile number");
+			System.out.println(" "+password+ " is valid password number");
 		}else {
-			System.out.println(" "+mNumber+ " is not valid mobile number");
+			System.out.println(" "+password+ " is not valid password number");
 	}
 	}
      public static void main(String[] args) {
     	// String fName=fName();
     	 //String lName=lName();
     	 //String mail=mail();
-    	 String mNumber=mNumber();
-    	 System.out.println("mobile number  is:->");
+    	// String mNumber=mNumber();
+    	 String password=password();
+    	 System.out.println("password  is:->");
     	 //Print(fName);
 		 //Print(lName);
     	 // Print(mail);
-    	 Print(mNumber);
+    	 Print(password);
+    	
 
 	}
 
