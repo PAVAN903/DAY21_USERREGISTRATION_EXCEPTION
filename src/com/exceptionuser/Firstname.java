@@ -6,7 +6,8 @@ import java.util.regex.Pattern;
 public class Firstname {
 	//static String fName;
 	//static String lName;
-	static String mail;
+	//static String mail;
+	static String mNumber;
 	
 	//static String fName() {
 		//Scanner sc=new Scanner(System.in);
@@ -20,29 +21,36 @@ public class Firstname {
 		//lName=sc.next();
 		//return lName;
 	//}
-	static String mail() {
+	//static String mail() {
+		//Scanner sc=new Scanner(System.in);
+		//System.out.println("enter mail address");
+		//mail=sc.next();
+		//return  mail;
+	//}
+	static String mNumber() {
 		Scanner sc=new Scanner(System.in);
-		System.out.println("enter mail address");
-		mail=sc.next();
-		return  mail;
+		System.out.println("enter mobile number");
+	     mNumber=sc.nextLine();
+		return  mNumber;
 	}
-	
-	static void Print(String fName) {
-		boolean pattern=Pattern.matches("abc.[a-z]+@bl.co.[a-z]+gmail", mail);
+	static void Print(String mNumber) {
+		boolean pattern=Pattern.matches("[+]?{1}[0-9]{2}[\\s]?{1}[7-9]{1}[0-9]{9}", mNumber);
 		if(pattern==true) {
-			System.out.println(" "+mail+ " is valid mail");
+			System.out.println(" "+mNumber+ " is valid mobile number");
 		}else {
-			System.out.println(" "+mail+ " is not valid mail");
+			System.out.println(" "+mNumber+ " is not valid mobile number");
 	}
 	}
      public static void main(String[] args) {
     	// String fName=fName();
     	 //String lName=lName();
-    	 String mail=mail();
-    	 System.out.println("mail address is:->");
+    	 //String mail=mail();
+    	 String mNumber=mNumber();
+    	 System.out.println("mobile number  is:->");
     	 //Print(fName);
 		 //Print(lName);
-    	  Print(mail);
+    	 // Print(mail);
+    	 Print(mNumber);
 
 	}
 
